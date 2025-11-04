@@ -1,4 +1,11 @@
 pipeline {
+    parameters {
+    choice(
+        name: 'ENVIRONMENT',
+        choices: ['dev', 'docker', 'prod'],
+        description: 'Choisir environnement de déploiement'
+    )
+}
     agent any
     tools {
         maven 'Maven3'
@@ -7,8 +14,8 @@ pipeline {
 
     environment {
         APP_NAME = 'buy-01'
-        SPRING_PROFILES_ACTIVE = 'dev'
-        MAVEN_OPTS = '-Dspring.profiles.active=dev'
+        SPRING_PROFILES_ACTIVE = "${params.ENVIRONMENT}"
+        MAVEN_OPTS = "-Dspring.profiles.active=${params.ENVIRONMENT}"
         
         EUREKA_SERVER_PORT = '8761'
         DB_USERNAME = 'mongodb'
