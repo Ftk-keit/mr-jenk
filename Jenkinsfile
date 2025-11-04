@@ -10,6 +10,11 @@ pipeline {
         defaultValue: true,
         description: 'Exécuter les tests ?'
     )
+    booleanParam(
+        name: 'CLEAN_MAVEN_CACHE',
+        defaultValue: true,
+        description: 'Nettoyer le cache Maven avant le build ?'
+    )
 }
     agent any
     tools {
@@ -51,6 +56,29 @@ pipeline {
 
                 sh 'java -version'
                 sh 'mvn -version'
+            }
+        }
+
+        stage('🧹 Nettoyage Cache Maven') {
+            when {
+                expression { params.CLEAN_MAVEN_CACHE == true }
+            }
+            steps {
+                echo '🧹 ════════════════════════════════════════'
+                echo '🗑️  NETTOYAGE DU CACHE MAVEN'
+                echo '🧹 ════════════════════════════════════════'
+                
+                script {
+                    sh '''
+                        echo "📂 Suppression du cache Maven local..."
+                        rm -rf ~/.m2/repository/org/apache/kafka
+                        rm -rf ~/.m2/repository/org/rocksdb
+                        rm -rf ~/.m2/repository/org/scala-lang
+                        
+                        echo "✅ Cache Maven nettoyé avec succès !"
+                        echo "Les dépendances seront téléchargées à nouveau."
+                    '''
+                }
             }
         }
 
