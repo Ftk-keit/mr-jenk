@@ -22,7 +22,7 @@ pipeline {
     stages {
         stage('Tests back') {
             steps {
-                echo "Coucou Ftk "
+                echo "Coucou Ftk"
                 echo 'Démarrage des tests du back'
             }
         }
