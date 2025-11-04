@@ -1,0 +1,74 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-10-22T22:37:26.017Z  INFO 183532 --- [api-gateway] [           main] c.e.apigateway.ApiGatewayApplication     : Starting ApiGatewayApplication using Java 21.0.8 with PID 183532 (/home/ftk/Documents/buy-01/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar started by ftk in /home/ftk/Documents/buy-01)
+2025-10-22T22:37:26.031Z  INFO 183532 --- [api-gateway] [           main] c.e.apigateway.ApiGatewayApplication     : The following 1 profile is active: "dev"
+2025-10-22T22:37:29.740Z  INFO 183532 --- [api-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=827fbcf5-306a-3b34-ad25-26c9908c2cce
+2025-10-22T22:37:32.355Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-10-22T22:37:32.355Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-10-22T22:37:32.355Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-10-22T22:37:32.355Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-10-22T22:37:32.355Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-10-22T22:37:32.356Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-10-22T22:37:32.357Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-10-22T22:37:32.357Z  INFO 183532 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-10-22T22:37:32.892Z  INFO 183532 --- [api-gateway] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-22T22:37:33.600Z  INFO 183532 --- [api-gateway] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-10-22T22:37:33.672Z  WARN 183532 --- [api-gateway] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-22T22:37:33.781Z  INFO 183532 --- [api-gateway] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-22T22:37:33.826Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-22T22:37:33.833Z  INFO 183532 --- [api-gateway] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-22T22:37:33.847Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-10-22T22:37:33.848Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-10-22T22:37:33.848Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-10-22T22:37:33.848Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-10-22T22:37:33.848Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-10-22T22:37:33.848Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-10-22T22:37:33.849Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-10-22T22:37:34.586Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-10-22T22:37:34.588Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-10-22T22:37:34.592Z  INFO 183532 --- [api-gateway] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-10-22T22:37:34.596Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1761172654595 with initial instances count: 0
+2025-10-22T22:37:34.603Z  INFO 183532 --- [api-gateway] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2025-10-22T22:37:34.605Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1761172654605, current=UP, previous=STARTING]
+2025-10-22T22:37:34.607Z  INFO 183532 --- [api-gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.12:api-gateway: registering service...
+2025-10-22T22:37:34.934Z  INFO 183532 --- [api-gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.12:api-gateway - registration status: 204
+2025-10-22T22:37:36.997Z  INFO 183532 --- [api-gateway] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application API-GATEWAY with eureka with status DOWN
+2025-10-22T22:37:36.998Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1761172656998, current=DOWN, previous=UP]
+2025-10-22T22:37:37.000Z  WARN 183532 --- [api-gateway] [           main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-10-22T22:37:37.002Z  INFO 183532 --- [api-gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.12:api-gateway: registering service...
+2025-10-22T22:37:37.040Z  INFO 183532 --- [api-gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.12:api-gateway - registration status: 204
+2025-10-22T22:37:37.045Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-10-22T22:37:40.052Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-10-22T22:37:40.097Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/192.168.1.12:api-gateway - deregister  status: 200
+2025-10-22T22:37:40.098Z  INFO 183532 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-10-22T22:37:40.165Z  INFO 183532 --- [api-gateway] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-22T22:37:40.196Z ERROR 183532 --- [api-gateway] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

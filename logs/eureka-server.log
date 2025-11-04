@@ -1,0 +1,261 @@
+  __    ______                __              _____                         __
+ / /   / ____/_  __________  / /______ _     / ___/___  ______   _____  ____\ \
+/ /   / __/ / / / / ___/ _ \/ //_/ __ `/_____\__ \/ _ \/ ___/ | / / _ \/ ___/\ \
+\ \  / /___/ /_/ / /  /  __/ ,< / /_/ /_____/__/ /  __/ /   | |/ /  __/ /    / /
+ \_\/_____/\__,_/_/   \___/_/|_|\__,_/     /____/\___/_/    |___/\___/_/    /_/
+
+
+2025-10-22T22:37:17.232Z  INFO 183356 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 21.0.8 with PID 183356 (/home/ftk/Documents/buy-01/eureka-server/target/eureka-server-0.0.1-SNAPSHOT.jar started by ftk in /home/ftk/Documents/buy-01)
+2025-10-22T22:37:17.238Z  INFO 183356 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : The following 1 profile is active: "dev"
+2025-10-22T22:37:20.331Z  INFO 183356 --- [eureka-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=33e8d4b8-c854-34d9-8c03-a5ff1c2b0e3f
+2025-10-22T22:37:20.995Z  INFO 183356 --- [eureka-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-10-22T22:37:21.027Z  INFO 183356 --- [eureka-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-22T22:37:21.027Z  INFO 183356 --- [eureka-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-10-22T22:37:21.086Z  INFO 183356 --- [eureka-server] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-22T22:37:21.088Z  INFO 183356 --- [eureka-server] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3730 ms
+2025-10-22T22:37:23.041Z  INFO 183356 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-10-22T22:37:23.045Z  INFO 183356 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-10-22T22:37:23.556Z  INFO 183356 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-10-22T22:37:23.556Z  INFO 183356 --- [eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-10-22T22:37:26.509Z  WARN 183356 --- [eureka-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-10-22T22:37:26.557Z  INFO 183356 --- [eureka-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-10-22T22:37:26.636Z  INFO 183356 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-10-22T22:37:26.643Z  INFO 183356 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-10-22T22:37:26.650Z  INFO 183356 --- [eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1761172646645 with initial instances count: 0
+2025-10-22T22:37:26.787Z  INFO 183356 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-10-22T22:37:26.792Z  WARN 183356 --- [eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T22:37:26.811Z  INFO 183356 --- [eureka-server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-10-22T22:37:26.811Z  INFO 183356 --- [eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-10-22T22:37:26.841Z  INFO 183356 --- [eureka-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-10-22T22:37:27.046Z  INFO 183356 --- [eureka-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EUREKA-SERVER with eureka with status UP
+2025-10-22T22:37:27.085Z  INFO 183356 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-10-22T22:37:27.086Z  INFO 183356 --- [eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-10-22T22:37:27.087Z  INFO 183356 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-10-22T22:37:27.087Z  INFO 183356 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-10-22T22:37:27.088Z  INFO 183356 --- [eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-10-22T22:37:27.097Z  INFO 183356 --- [eureka-server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-10-22T22:37:27.109Z  INFO 183356 --- [eureka-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-10-22T22:37:27.111Z  INFO 183356 --- [eureka-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-10-22T22:37:27.235Z  INFO 183356 --- [eureka-server] [           main] c.e.e.EurekaServerApplication            : Started EurekaServerApplication in 11.34 seconds (process running for 12.626)
+2025-10-22T22:37:34.398Z  INFO 183356 --- [eureka-server] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22T22:37:34.398Z  INFO 183356 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-22T22:37:34.400Z  INFO 183356 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-22T22:37:34.925Z  INFO 183356 --- [eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.12:api-gateway with status UP (replication=false)
+2025-10-22T22:37:37.036Z  INFO 183356 --- [eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/192.168.1.12:api-gateway with status DOWN (replication=false)
+2025-10-22T22:37:40.090Z  INFO 183356 --- [eureka-server] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/192.168.1.12:api-gateway (replication=false)
+2025-10-22T22:37:51.676Z  INFO 183356 --- [eureka-server] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USER-SERVICE/192.168.1.12:user-service:8081 with status UP (replication=false)
+2025-10-22T22:38:00.400Z  INFO 183356 --- [eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT-SERVICE/192.168.1.12:product-service:8082 with status UP (replication=false)
+2025-10-22T22:38:10.867Z  INFO 183356 --- [eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MEDIA-SERVICE/192.168.1.12:media-service:8083 with status UP (replication=false)
+2025-10-22T22:38:27.089Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:39:27.089Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:40:10.274Z  WARN 183356 --- [eureka-server] [nio-8761-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/css/wro.css
+2025-10-22T22:40:10.274Z  WARN 183356 --- [eureka-server] [nio-8761-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/js/wro.js
+2025-10-22T22:40:10.282Z  WARN 183356 --- [eureka-server] [nio-8761-exec-7] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/js/wro.js.
+2025-10-22T22:40:10.282Z  WARN 183356 --- [eureka-server] [nio-8761-exec-5] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/css/wro.css.
+2025-10-22T22:40:10.332Z  WARN 183356 --- [eureka-server] [nio-8761-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/js/wro.js
+2025-10-22T22:40:10.333Z  WARN 183356 --- [eureka-server] [nio-8761-exec-8] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/js/wro.js.
+2025-10-22T22:40:10.370Z  WARN 183356 --- [eureka-server] [nio-8761-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2025-10-22T22:40:10.371Z  WARN 183356 --- [eureka-server] [nio-8761-exec-9] o.s.web.servlet.PageNotFound             : No endpoint GET /favicon.ico.
+2025-10-22T22:40:12.922Z  WARN 183356 --- [eureka-server] [nio-8761-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/js/wro.js
+2025-10-22T22:40:12.922Z  WARN 183356 --- [eureka-server] [nio-8761-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/css/wro.css
+2025-10-22T22:40:12.923Z  WARN 183356 --- [eureka-server] [nio-8761-exec-3] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/js/wro.js.
+2025-10-22T22:40:12.924Z  WARN 183356 --- [eureka-server] [nio-8761-exec-4] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/css/wro.css.
+2025-10-22T22:40:12.984Z  WARN 183356 --- [eureka-server] [nio-8761-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/js/wro.js
+2025-10-22T22:40:12.986Z  WARN 183356 --- [eureka-server] [nio-8761-exec-6] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/js/wro.js.
+2025-10-22T22:40:23.700Z  WARN 183356 --- [eureka-server] [nio-8761-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/css/wro.css
+2025-10-22T22:40:23.700Z  WARN 183356 --- [eureka-server] [io-8761-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/js/wro.js
+2025-10-22T22:40:23.701Z  WARN 183356 --- [eureka-server] [nio-8761-exec-9] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/css/wro.css.
+2025-10-22T22:40:23.701Z  WARN 183356 --- [eureka-server] [io-8761-exec-10] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/js/wro.js.
+2025-10-22T22:40:23.727Z  WARN 183356 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /eureka/js/wro.js
+2025-10-22T22:40:23.728Z  WARN 183356 --- [eureka-server] [nio-8761-exec-1] o.s.web.servlet.PageNotFound             : No endpoint GET /eureka/js/wro.js.
+2025-10-22T22:40:27.089Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:41:27.089Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:42:27.089Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:43:27.090Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:44:27.091Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:45:27.090Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:46:27.090Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:47:26.793Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T22:47:27.090Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:48:27.090Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:49:27.091Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:50:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-10-22T22:51:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:52:26.812Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-22T22:52:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:53:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:54:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:55:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:56:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:57:26.795Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T22:57:27.092Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:58:27.093Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T22:59:27.093Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:00:27.093Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:01:27.093Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:02:27.093Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:03:27.093Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:04:27.094Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:05:27.094Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:06:27.094Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:07:26.796Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T23:07:26.812Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-22T23:07:27.094Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:08:27.094Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:09:27.094Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:10:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:11:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:12:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:13:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:14:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:15:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:16:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:17:26.798Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T23:17:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:18:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:19:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:20:27.095Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:21:27.096Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:22:26.811Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-22T23:22:27.096Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:23:27.096Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:24:27.097Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:25:27.097Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:26:27.097Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:27:26.798Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T23:27:27.098Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:28:27.099Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-10-22T23:29:27.100Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:30:27.100Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:31:27.100Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:32:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:33:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:34:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:35:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:36:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:37:26.799Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T23:37:26.811Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-22T23:37:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:38:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:39:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:40:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:41:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:42:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:43:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:44:27.101Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:45:27.102Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:46:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-10-22T23:47:26.800Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T23:47:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:48:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:49:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:50:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:51:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:52:26.812Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-22T23:52:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:53:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:54:27.112Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:55:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:56:27.111Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:57:26.801Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-22T23:57:27.112Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:58:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-22T23:59:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:00:27.112Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:01:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:02:27.112Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:03:27.112Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:04:27.112Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:05:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:06:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:07:26.803Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T00:07:26.812Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-23T00:07:27.114Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:08:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:09:27.113Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:10:27.114Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:11:27.114Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:12:27.114Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:13:27.115Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:14:27.115Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:15:27.115Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:16:27.116Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:17:26.804Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T00:17:27.115Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:18:27.115Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:19:27.115Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:20:27.116Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:21:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:22:26.813Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-23T00:22:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:23:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:24:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:25:27.118Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:26:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:27:26.805Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T00:27:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:28:27.117Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:29:27.118Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:30:27.118Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:31:27.118Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:32:27.118Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:33:27.118Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:34:27.119Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:35:27.119Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:36:27.119Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:37:26.806Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T00:37:26.812Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-23T00:37:27.119Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:38:27.119Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:39:27.120Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:40:27.121Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:41:27.121Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:42:27.122Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:43:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:44:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:45:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:46:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:47:26.807Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T00:47:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:48:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:49:27.124Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:50:27.124Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:51:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:52:26.820Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-23T00:52:27.124Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:53:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:54:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:55:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:56:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:57:26.809Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T00:57:27.123Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:58:27.124Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T00:59:27.124Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:00:27.124Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:01:27.125Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:02:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:03:27.127Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:04:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:05:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:06:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:07:26.812Z  INFO 183356 --- [eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2025-10-23T01:07:26.817Z  WARN 183356 --- [eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-10-23T01:07:27.127Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:08:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:09:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:10:27.126Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T01:11:27.127Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T16:27:10.495Z  INFO 183356 --- [eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-10-23T16:27:36.895Z  INFO 183356 --- [eureka-server] [ionShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EUREKA-SERVER with eureka with status DOWN
+2025-10-23T16:27:36.936Z  INFO 183356 --- [eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance MEDIA-SERVICE/192.168.1.12:media-service:8083 with status DOWN (replication=false)
+2025-10-23T16:27:36.953Z  INFO 183356 --- [eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USER-SERVICE/192.168.1.12:user-service:8081 with status DOWN (replication=false)
+2025-10-23T16:27:36.973Z  INFO 183356 --- [eureka-server] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-23T16:27:37.029Z  INFO 183356 --- [eureka-server] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-23T16:27:37.036Z  INFO 183356 --- [eureka-server] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-10-23T16:27:37.036Z  INFO 183356 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-10-23T16:27:37.036Z  INFO 183356 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-10-23T16:27:37.036Z  INFO 183356 --- [eureka-server] [ionShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-10-23T16:27:37.050Z  INFO 183356 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-10-23T16:27:37.050Z  INFO 183356 --- [eureka-server] [ionShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-10-23T16:27:37.101Z  INFO 183356 --- [eureka-server] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-10-23T16:27:37.101Z  INFO 183356 --- [eureka-server] [ionShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
