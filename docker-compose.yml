@@ -1,7 +1,9 @@
+name: mr-jenk
+
 services:
     mongodb:
         image: mongo:latest
-        container_name: mongo-database
+        container_name: mr-jenk-mongo-database
         restart: unless-stopped
 #        ports:
 #            - "27017:27017"
@@ -52,7 +54,7 @@ services:
         build:
             context: .
             dockerfile: ./eureka-server/Dockerfile
-        container_name: eureka-server
+        container_name: mr-jenk-eureka-server
         restart: unless-stopped
         ports:
             - "${EUREKA_SERVER_PORT}:${EUREKA_SERVER_PORT}"
@@ -72,7 +74,7 @@ services:
         build:
             context: .
             dockerfile: ./api-gateway/Dockerfile
-        container_name: api-gateway
+        container_name: mr-jenk-api-gateway
         restart: unless-stopped
         ports:
             - "8080:8080"
@@ -96,7 +98,7 @@ services:
         build:
             context: .
             dockerfile: ./user-service/Dockerfile
-        container_name: user-service
+        container_name: mr-jenk-user-service
         restart: unless-stopped
 #        ports:
 #            - "8081:8081"
@@ -129,7 +131,7 @@ services:
         build:
             context: .
             dockerfile: ./product-service/Dockerfile
-        container_name: product-service
+        container_name: mr-jenk-product-service
         restart: unless-stopped
 #        ports:
 #            - "8082:8082"
@@ -159,7 +161,7 @@ services:
         build:
             context: .
             dockerfile: ./media-service/Dockerfile
-        container_name: media-service
+        container_name: mr-jenk-media-service
         restart: unless-stopped
 #        ports:
 #            - "8083:8083"
@@ -191,7 +193,7 @@ services:
         build:
             context: ./frontend
             dockerfile: Dockerfile
-        container_name: frontend
+        container_name: mr-jenk-frontend
         restart: unless-stopped
         ports:
             - "4200:4200"
