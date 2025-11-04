@@ -114,7 +114,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Démarrage des tests front'
-                    sh 'npm test'          
+                    sh 'npm test -- --no-watch --browsers=ChromeHeadless'         
                 }
             }
         }
@@ -127,7 +127,7 @@ pipeline {
                     string(credentialsId: 'aws-secret-access-key', variable: 'AWS_SECRET_ACCESS_KEY'),
                     string(credentialsId: 'keystore-password', variable: 'KEY_STORE_PASSWORD')
                 ]) {
-                    sh 'docker compose build'
+                    sh 'docker compose build --parallel'
                 }
             }
         }
