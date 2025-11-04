@@ -5,6 +5,11 @@ pipeline {
         choices: ['dev', 'docker', 'prod'],
         description: 'Choisir environnement de déploiement'
     )
+    booleanParam(
+        name: 'RUN_TESTS',
+        defaultValue: true,
+        description: 'Exécuter les tests ?'
+    )
 }
     agent any
     tools {
@@ -28,6 +33,9 @@ pipeline {
 
     stages {
         stage('Tests back') {
+            when {
+                expression {params.RUN_TESTS == true}
+            }
             steps {
                 echo "Coucou Ftk"
                 echo 'Démarrage des tests du back'
@@ -47,6 +55,9 @@ pipeline {
         }
 
         stage('🔨 Build & 🧪 Tests') {
+            when {
+                expression {params.RUN_TESTS == true}
+            }
             steps {
                 echo 'Compilation des tests jUnit '
                 sh 'mvn clean package '
@@ -80,7 +91,7 @@ pipeline {
                 echo 'Alors là ma go t\'as assuré'
             }
         }
-        stage('Tests front') {
+        stage('Installation des dépendances frontend') {
             steps {
                 dir('frontend') {
                     echo 'Démarrage de l\'installation des dépendances'
@@ -93,6 +104,17 @@ pipeline {
                 dir('frontend') {
                     echo 'Démarrage du build'
                     sh 'npm run build'
+                }
+            }
+        }
+        stage('Tests front') {
+            when {
+                expression {params.RUN_TESTS == true}
+            }
+            steps {
+                dir('frontend') {
+                    echo 'Démarrage des tests front'
+                    sh 'npm test'          
                 }
             }
         }
