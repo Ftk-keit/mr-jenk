@@ -12,8 +12,13 @@ pipeline {
     )
     booleanParam(
         name: 'CLEAN_MAVEN_CACHE',
-        defaultValue: true,
+        defaultValue: false,
         description: 'Nettoyer le cache Maven avant le build ?'
+    )
+    booleanParam(
+        name: 'SKIP_DEPLOY',
+        defaultValue: false,
+        description: 'Sauter le déploiement (build uniquement) ?'
     )
 }
     agent any
@@ -25,7 +30,7 @@ pipeline {
     environment {
         APP_NAME = 'buy-01'
         SPRING_PROFILES_ACTIVE = "${params.ENVIRONMENT}"
-        MAVEN_OPTS = "-Dspring.profiles.active=${params.ENVIRONMENT}"
+        MAVEN_OPTS = "-Dspring.profiles.active=${params.ENVIRONMENT} -Dmaven.artifact.threads=10"
         
         EUREKA_SERVER_PORT = '8761'
         DB_USERNAME = 'mongodb'
@@ -87,8 +92,8 @@ pipeline {
                 expression {params.RUN_TESTS == true}
             }
             steps {
-                echo 'Compilation des tests jUnit '
-                sh 'mvn clean package '
+                echo 'Compilation et tests jUnit '
+                sh 'mvn package -T 2C'
                 junit '**/target/surefire-reports/*.xml'
             }
             post {
@@ -122,16 +127,22 @@ pipeline {
         stage('Installation des dépendances frontend') {
             steps {
                 dir('frontend') {
-                    echo 'Démarrage de l\'installation des dépendances'
-                    sh 'npm install'
+                    echo 'Vérification des dépendances npm...'
+                    sh '''
+                        if [ -f "package-lock.json" ]; then
+                            npm ci --prefer-offline --no-audit
+                        else
+                            npm install --prefer-offline --no-audit
+                        fi
+                    '''
                 }
             }
         }
         stage('Build front') {
             steps {
                 dir('frontend') {
-                    echo 'Démarrage du build'
-                    sh 'npm run build'
+                    echo 'Démarrage du build frontend (production)'
+                    sh 'npm run build -- --configuration production'
                 }
             }
         }
@@ -148,6 +159,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
+                echo '🐳 Construction des images Docker...'
                 withCredentials([
                     string(credentialsId: 'db-password', variable: 'DB_PASS'),
                     string(credentialsId: 'jwt-secret', variable: 'JWT_SECRET'),
@@ -155,12 +167,15 @@ pipeline {
                     string(credentialsId: 'aws-secret-access-key', variable: 'AWS_SECRET_ACCESS_KEY'),
                     string(credentialsId: 'keystore-password', variable: 'KEY_STORE_PASSWORD')
                 ]) {
-                    sh 'docker compose build --parallel'
+                    sh 'DOCKER_BUILDKIT=1 docker compose build --parallel --progress=plain'
                 }
             }
         }
 
         stage('🚀 Deploy Local'){
+            when {
+                expression { params.SKIP_DEPLOY == false }
+            }
             steps{
                 script {
                     echo 'DÉPLOIEMENT LOCAL EN COURS...'
@@ -183,9 +198,9 @@ pipeline {
 
                        sh 'docker compose up -d'
 
-                       echo 'Attente du démarrage des services (60 secondes)...'
+                       echo 'Attente du démarrage des services (30 secondes)...'
 
-                       sleep (time: 60, unit:'SECONDS')
+                       sleep (time: 30, unit:'SECONDS')
 
                        sh '''
                            echo "Vérification de l\'état des services..."
