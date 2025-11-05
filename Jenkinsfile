@@ -31,6 +31,8 @@ pipeline {
         APP_NAME = 'buy-01'
         SPRING_PROFILES_ACTIVE = "${params.ENVIRONMENT}"
         MAVEN_OPTS = "-Dspring.profiles.active=${params.ENVIRONMENT} -Dmaven.artifact.threads=10"
+        DOCKER_BUILDKIT = '1'
+        COMPOSE_DOCKER_CLI_BUILD = '1'
         
         EUREKA_SERVER_PORT = '8761'
         DB_USERNAME = 'mongodb'
@@ -159,7 +161,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                echo '🐳 Construction des images Docker...'
+                echo '🐳 Construction des images Docker avec cache optimisé...'
                 withCredentials([
                     string(credentialsId: 'db-password', variable: 'DB_PASS'),
                     string(credentialsId: 'jwt-secret', variable: 'JWT_SECRET'),
@@ -167,7 +169,11 @@ pipeline {
                     string(credentialsId: 'aws-secret-access-key', variable: 'AWS_SECRET_ACCESS_KEY'),
                     string(credentialsId: 'keystore-password', variable: 'KEY_STORE_PASSWORD')
                 ]) {
-                    sh 'DOCKER_BUILDKIT=1 docker compose build --parallel --progress=plain'
+                    sh '''
+                        export DOCKER_BUILDKIT=1
+                        export COMPOSE_DOCKER_CLI_BUILD=1
+                        docker compose build --parallel --build-arg BUILDKIT_INLINE_CACHE=1
+                    '''
                 }
             }
         }
