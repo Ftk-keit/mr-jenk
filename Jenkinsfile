@@ -131,11 +131,7 @@ pipeline {
                 dir('frontend') {
                     echo 'Vérification des dépendances npm...'
                     sh '''
-                        if [ -f "package-lock.json" ]; then
-                            npm ci --prefer-offline --no-audit
-                        else
-                            npm install --prefer-offline --no-audit
-                        fi
+                        npm install --prefer-offline --no-audit
                     '''
                 }
             }
