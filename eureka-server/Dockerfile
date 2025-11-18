@@ -1,4 +1,3 @@
-# Utilise directement le JAR construit par Jenkins
 FROM eclipse-temurin:17-jre-alpine
 RUN apk add --no-cache curl
 WORKDIR /app
