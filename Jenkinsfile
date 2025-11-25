@@ -123,7 +123,7 @@ pipeline {
         }
         stage('Finition') {
             steps {
-                echo 'Alors là ma go t\'as assuré '
+                echo 'Alors là ma go t\'as assuré'
             }
         }
         stage('Installation des dépendances frontend') {
